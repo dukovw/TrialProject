@@ -723,18 +723,12 @@
                                 <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
                                     <div class="bg-overlay bg-overlay--blue"></div>
                                     <h3>
-                                        <i class="zmdi zmdi-account-calendar"></i>26 April, 2018</h3>
-                                    <a>
-                                    <button class="au-btn-plus">
-                                        <i class="zmdi zmdi-plus"></i>
-                                    </button>
-                                    </a>
+                                        <i class="zmdi zmdi-account-calendar"></i>TRIAL POSTS</h3>
                                 </div>
                                 <div class="au-task js-list-load">
                                     <div class="au-task__title">
                                         <p>here you can see trial posts</p>
                                     </div>
-                                    @yield('content')
                                     <div class="au-task-list js-scrollbar3">
                                         <div class="au-task__item au-task__item--warning">
                                             <div class="au-task__item-inner">
