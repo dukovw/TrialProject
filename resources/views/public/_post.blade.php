@@ -5,15 +5,8 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            @include('posts.message')
-        </div>
-        <div class="col-md-12">
-            @yield('content')
-        </div>
-    </div>
+<div class="col-md-12">
+    @yield('content')
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>

@@ -14,4 +14,9 @@
 Route::get('/', function () {
     return view('template/index');
 });
-Route::resource('/post','PostController');
+
+Route::resource('/admin/post','PostController');
+
+Route::get('/', 'UserPostController@ShowPostOnTheTemplate');
+
+Route::resource('posts', 'UserPostController');

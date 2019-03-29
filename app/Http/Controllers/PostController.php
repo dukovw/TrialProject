@@ -23,7 +23,8 @@ class PostController extends Controller
             ->latest()
             ->first();
        */
-        $posts = Posts::orderBy('created_at', 'asc')->paginate(5);
+        $posts = Posts::orderBy('created_at', 'max', 'asc')->paginate(5);
+
         return view ('posts.index')->withPost($posts);
     }
 

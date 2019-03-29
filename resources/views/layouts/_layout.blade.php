@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -723,62 +724,28 @@
                                 <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
                                     <div class="bg-overlay bg-overlay--blue"></div>
                                     <h3>
-                                        <i class="zmdi zmdi-account-calendar"></i>26 April, 2018</h3>
-                                    <a>
-                                    <button class="au-btn-plus">
-                                        <i class="zmdi zmdi-plus"></i>
-                                    </button>
-                                    </a>
+                                        <i class="zmdi zmdi-account-calendar"></i>TRIAL POSTS</h3>
                                 </div>
                                 <div class="au-task js-list-load">
                                     <div class="au-task__title">
                                         <p>here you can see trial posts</p>
                                     </div>
-                                    @yield('content')
                                     <div class="au-task-list js-scrollbar3">
-                                        <div class="au-task__item au-task__item--warning">
-                                            <div class="au-task__item-inner">
-                                                <h5 class="task">
-                                                    <a href="#">Create new task for Dashboard</a>
-                                                </h5>
-                                                <span class="time">11:00 AM</span>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__item au-task__item--primary">
-                                            <div class="au-task__item-inner">
-                                                <h5 class="task">
-                                                    <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                </h5>
-                                                <span class="time">02:00 PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__item au-task__item--success">
-                                            <div class="au-task__item-inner">
-                                                <h5 class="task">
-                                                    <a href="#">Create new task for Dashboard</a>
-                                                </h5>
-                                                <span class="time">03:30 PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__item au-task__item--danger js-load-item">
-                                            <div class="au-task__item-inner">
-                                                <h5 class="task">
-                                                    <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                </h5>
-                                                <span class="time">10:00 AM</span>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__item au-task__item--warning js-load-item">
-                                            <div class="au-task__item-inner">
-                                                <h5 class="task">
-                                                    <a href="#">Create new task for Dashboard</a>
-                                                </h5>
-                                                <span class="time">11:00 AM</span>
-                                            </div>
-                                        </div>
+                                        @foreach($post as $p)
+                                                <div class="au-task__item au-task__item--warning">
+                                                    <div class="au-task__item-inner">
+                                                        <h5 class="task">
+                                                            <a href="{{URL::to('posts/' . $p->id)}}">{{$p->title}}</a>
+                                                        </h5>
+                                                        <span class="time">{{$p->created_at}}</span>
+                                                    </div>
+                                                </div>
+                                        @endforeach
                                     </div>
                                     <div class="au-task__footer">
+                                        <a href="{{URL::to('posts')}}">
                                         <button class="au-btn au-btn-load js-load-btn">load more</button>
+                                        </ahre>
                                     </div>
                                 </div>
                             </div>
